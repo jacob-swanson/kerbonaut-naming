@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kerbal Name Generator</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Validator -->
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
+
+    <!-- Site styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Kerbal Name Generator!</h1>
+      </div><!-- /.page-header -->
+
+      <form id="integerForm" class="form-horizontal">
+        <div class="form-group">
+          <label class="col-xs-12">Number of names to generate</label>
+          <div class="col-xs-4">
+            <input type="number" class="form-control" name="number" id="inputNumberOfNames1" placeholder="Enter a number" step="1" required data-bv-integer-message="The value is not an integer" data-bv-notempty-message="The value is required"/>
+          </div>
+        </div>
+        <button type="button" id="submit-btn" class="btn btn-default">Generate</button>
+      </form><!-- /.integerForm -->
+
+      <ul id="name-list" class="list-group spacer"></ul>
+
+    </div><!-- /.container -->
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright &copy 2014 Jacob Swanson</p>
+      </div>
+    </div><!-- /.footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
+
+    <!-- Name Generator module -->
+    <script src="js/generate_names.js"></script>
+    <!-- GUI JavaScript -->
+    <script>
+      $(document).ready(function() {
+        // Initialize the form validator
+        $('#integerForm').bootstrapValidator({
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            }
+        });
+
+        // Form submit action.
+        var submit = function() {
+          // Get number of names to generate.
+          var num = $('#inputNumberOfNames1').val();
+
+          // Check if the form data is valid.
+          $('#integerForm').data('bootstrapValidator').validate();
+          if (!$('#integerForm').data('bootstrapValidator').validate().isValid()) {
+            console.log('Integer value was not valid.');
+            return;
+          }
+
+          // Clear the list for the new names.
+          $('#name-list').empty();
+
+          // Generate num names.
+          for (var i = 0; i < num; i++) {
+            // Template for the list item.
+            var itemTemplate = '<li class="list-group-item col-sm-4">%NAME%</li>';
+
+            // Add the list item to the list.
+            $('#name-list').append(itemTemplate.replace(/%NAME%/, NameGenerator.generateName()));
+          }    
+        };
+
+        // Handle pressing the enter key while the cursor is in the input form.
+        $('#inputNumberOfNames1').keypress(function(e) {
+          // If 'enter' is pressed ...
+          if (e.keyCode == '13') {
+            // ... prevent the default action ...
+            e.preventDefault();
+
+            // ... and generate the list of names.
+            submit();
+          }
+        });
+
+        // Submit button for generating names.
+        $('#submit-btn').click(function () {
+          // Generate the list of names.
+          submit();
+        });
+      });
+    </script>
+  </body>
+</html>
