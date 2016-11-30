@@ -2,6 +2,7 @@
   "name": "kerbal-names",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://www.swandiggy.com/kerbonaut-naming",
   "devDependencies": {
     "react-scripts": "0.7.0"
   },
