@@ -132,7 +132,7 @@ class App extends Component {
                     </ul>
                 </div>
                 <nav className="navbar navbar-light bg-faded navbar-fixed-bottom">
-                    <div className="container">
+                    <div className="container text-xs-center">
                         Copyright &copy; {year} Jacob Swanson. All rights reserved.
                     </div>
                 </nav>
