@@ -1,7 +1,7 @@
 import KerbalGender from './KerbalGender'
 
 export default {
-    [KerbalGender.Male]: {
+    [KerbalGender.Male.name]: {
         names: [
             "Adam",
             "Al",
@@ -306,7 +306,7 @@ export default {
             "zor"
         ]
     },
-    [KerbalGender.Female]: {
+    [KerbalGender.Female.name]: {
         names: [
             "Alice",
             "Barbara",

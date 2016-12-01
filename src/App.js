@@ -15,10 +15,12 @@ class App extends Component {
     }
 
     updateKerbals() {
+        const {numKerbals, kerbalGender} = this.state;
+
         const kerbals = [];
-        for (let i = 0; i < this.state.numKerbals; i++) {
-            if (this.state.kerbalGender) {
-                kerbals.push(KerbalGenerator.generate(this.state.kerbalGender));
+        for (let i = 0; i < numKerbals; i++) {
+            if (kerbalGender) {
+                kerbals.push(KerbalGenerator.generate(kerbalGender));
             } else {
                 kerbals.push(KerbalGenerator.generateRandom());
             }
@@ -27,7 +29,7 @@ class App extends Component {
     }
 
     onNumKerbalsChange = (e) => {
-        const numKerbals = e.target.value;
+        const numKerbals = Math.max(0, Math.min(e.target.value, 1000));
 
         this.setState(prevState => ({...prevState, numKerbals}));
     };
@@ -62,8 +64,9 @@ class App extends Component {
     }
 
     render() {
+        let i = 0;
         const kerbalComponents = this.state.kerbals.map(kerbal => (
-            <li key={kerbal.name}
+            <li key={i++}
                 className={"list-group-item col-sm-3 " + (this.getGenderCssClass(kerbal))}>{kerbal.name}</li>));
         const year = new Date().getFullYear();
 

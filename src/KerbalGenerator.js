@@ -11,7 +11,7 @@ export class KerbalGenerator {
      * @private
      */
     _getRandomProperName(kerbalGender) {
-        return data[kerbalGender].names[Random.getRandomInt(0, data[kerbalGender].names.length)];
+        return data[kerbalGender.name].names[Random.getRandomInt(0, data[kerbalGender.name].names.length)];
     }
 
     /**
@@ -41,8 +41,8 @@ export class KerbalGenerator {
     _getRandomName(kerbalGender) {
         let kerbalName;
         do {
-            kerbalName = data[kerbalGender].prefixes[Random.getRandomInt(0, data[kerbalGender].prefixes.length)] +
-                data[kerbalGender].suffixes[Random.getRandomInt(0, data[kerbalGender].suffixes.length)];
+            kerbalName = data[kerbalGender.name].prefixes[Random.getRandomInt(0, data[kerbalGender.name].prefixes.length)] +
+                data[kerbalGender.name].suffixes[Random.getRandomInt(0, data[kerbalGender.name].suffixes.length)];
         } while (!this._isNameValid(kerbalName));
         return kerbalName;
     }
