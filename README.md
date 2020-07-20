@@ -1,7 +1,7 @@
 # kerbonaut-naming
 A Kerbal name generator
 
-https://www.jacob-swanson.com/kerbonaut-naming/
+http://jacob-swanson.github.io/kerbonaut-naming/
 
 ## How is a Kerbal name generated?
 First the gender is decided.
