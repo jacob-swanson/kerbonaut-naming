@@ -79,7 +79,8 @@ class App extends Component {
                         <p>
                             <a className="github-button" href="https://github.com/jacob-swanson/kerbonaut-naming"
                                data-size="large" data-show-count="true"
-                               aria-label="Star jacob-swanson/kerbonaut-naming on GitHub">Star</a></p>
+                               aria-label="Star jacob-swanson/kerbonaut-naming on GitHub">Star</a>
+                        </p>
                     </div>
                 </div>
                 <div className="container">

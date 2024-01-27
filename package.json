@@ -4,18 +4,29 @@
   "private": true,
   "homepage": "https://jacob-swanson.github.io/kerbonaut-naming/",
   "devDependencies": {
-    "react-scripts": "0.7.0"
+    "react-scripts": "^5.0.1"
   },
   "dependencies": {
-    "babel-polyfill": "6.16.0",
     "bootstrap": "4.0.0-alpha.5",
-    "react": "15.4.1",
-    "react-dom": "15.4.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
