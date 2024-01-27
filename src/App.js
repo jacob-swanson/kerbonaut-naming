@@ -77,16 +77,9 @@ class App extends Component {
                         <h1 className="display-3">Kerbonaut Naming</h1>
                         <p>Generate random Kerbonaut names</p>
                         <p>
-                            <a className="github-button"
-                               href="https://github.com/jacob-swanson/kerbonaut-naming"
-                               data-style="mega"
-                               data-count-href="/jacob-swanson/kerbonaut-naming/stargazers"
-                               data-count-api="/repos/jacob-swanson/kerbonaut-naming#stargazers_count"
-                               data-count-aria-label="# stargazers on GitHub"
-                               aria-label="Star jacob-swanson/kerbonaut-naming on GitHub">
-                                Star
-                            </a>
-                        </p>
+                            <a className="github-button" href="https://github.com/jacob-swanson/kerbonaut-naming"
+                               data-size="large" data-show-count="true"
+                               aria-label="Star jacob-swanson/kerbonaut-naming on GitHub">Star</a></p>
                     </div>
                 </div>
                 <div className="container">

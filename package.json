@@ -1,8 +1,8 @@
 {
-  "name": "kerbal-names",
+  "name": "kerbonaut-naming",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.swandiggy.com/kerbonaut-naming",
+  "homepage": "https://github.com/jacob-swanson/kerbonaut-naming",
   "devDependencies": {
     "react-scripts": "0.7.0"
   },
