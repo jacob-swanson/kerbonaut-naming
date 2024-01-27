@@ -1,6 +1,13 @@
 {
-  "main.css": "static/css/main.2a7927bb.css",
-  "main.css.map": "static/css/main.2a7927bb.css.map",
-  "main.js": "static/js/main.12885ebc.js",
-  "main.js.map": "static/js/main.12885ebc.js.map"
+  "files": {
+    "main.css": "/kerbonaut-naming/static/css/main.69337df8.css",
+    "main.js": "/kerbonaut-naming/static/js/main.b3ff71bd.js",
+    "index.html": "/kerbonaut-naming/index.html",
+    "main.69337df8.css.map": "/kerbonaut-naming/static/css/main.69337df8.css.map",
+    "main.b3ff71bd.js.map": "/kerbonaut-naming/static/js/main.b3ff71bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69337df8.css",
+    "static/js/main.b3ff71bd.js"
+  ]
 }
