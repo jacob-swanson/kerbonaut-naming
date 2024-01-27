@@ -2,15 +2,15 @@
   "name": "kerbonaut-naming",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/jacob-swanson/kerbonaut-naming",
+  "homepage": "https://jacob-swanson.github.io/kerbonaut-naming/",
   "devDependencies": {
     "react-scripts": "0.7.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.16.0",
-    "bootstrap": "^4.0.0-alpha.5",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "babel-polyfill": "6.16.0",
+    "bootstrap": "4.0.0-alpha.5",
+    "react": "15.4.1",
+    "react-dom": "15.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
